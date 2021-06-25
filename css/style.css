@@ -26,6 +26,7 @@ html {
   backdrop-filter: blur(224px);
   border-radius: 20px;
 }
+
 .updates {
   display: flex;
   flex-direction: row;
