@@ -1,126 +1,180 @@
-.updates p, .subjects p, .litrature .info .title, .left-stat p, .raiting {
+//Шаблон для шрифта Gilroy Bold
+%font-bold {
   font-family: Gilroy;
-  font-weight: bold; }
-
-html, .progress, .range p, .button-classes p, .result p, .title-litrature,
-.title-geography,
-.title-history,
-.title-algebra {
-  font-family: Gilroy; }
-
-.screen, .statistic-screen {
-  background: linear-gradient(to top right, white, #cee6fd); }
-
-html {
-  background: linear-gradient(to top right, #fde6e6, #d2d2fa); }
-
-.updates .ellipse, .litrature, .project-management {
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.01), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.00759259), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.00607407), 0px 20px 13px rgba(0, 0, 0, 0.005), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00392593), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00240741); }
-
-.play-bg {
-  box-shadow: 0px 42px 65px rgba(20, 34, 244, 0.14), 0px 27.2222px 38.0671px rgba(20, 34, 244, 0.106296), 0px 16.1778px 20.7037px rgba(20, 34, 244, 0.085037), 0px 8.4px 10.5625px rgba(20, 34, 244, 0.07), 0px 3.42222px 5.2963px rgba(20, 34, 244, 0.054963), 0px 0.777778px 2.55787px rgba(20, 34, 244, 0.0337037); }
-
-.subjects .avatar-first-user, .history .avatar-third-user, .litrature .avatar-second-user {
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15)); }
-
-.screen, .statistic-screen, .header-statistic {
-  backdrop-filter: blur(22.4rem); }
-
+  font-weight: bold;
+}
+//Шаблон для шрифта Gilroy
+%gilroy {
+  font-family: Gilroy;
+}
+//Градиент для экранов
+%lightblue-gradient {
+  background: linear-gradient(
+    to top right,
+    rgb(255, 255, 255),
+    rgb(206, 230, 253)
+  );
+}
+//Градиент для фона
+%bg-gradient {
+  background: linear-gradient(
+    to top right,
+    rgb(253, 230, 230),
+    rgb(210, 210, 250)
+  );
+}
+//Тени
+%shadow {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.01),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.00759259),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.00607407),
+    0px 20px 13px rgba(0, 0, 0, 0.005),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00392593),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00240741);
+}
+//Тень для кнопки плей
+%shadow-play {
+  box-shadow: 0px 42px 65px rgba(20, 34, 244, 0.14),
+    0px 27.2222px 38.0671px rgba(20, 34, 244, 0.106296),
+    0px 16.1778px 20.7037px rgba(20, 34, 244, 0.085037),
+    0px 8.4px 10.5625px rgba(20, 34, 244, 0.07),
+    0px 3.42222px 5.2963px rgba(20, 34, 244, 0.054963),
+    0px 0.777778px 2.55787px rgba(20, 34, 244, 0.0337037);
+}
+//Тень дропшедоу
+%dropshadow {
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+}
+//Переменная цвета
+$cb: #1422f4;
+$cw: #fff;
+//Блюр
+%blur {
+  backdrop-filter: blur(22.4rem);
+}
+//HTML
 html {
   font-size: 10px;
-  height: 208rem; }
-
+  height: 208rem;
+  @extend %bg-gradient;
+  @extend %gilroy;
+}
+//Star at the center
 .star {
   display: flex;
   justify-content: center;
   flex-direction: row;
   position: fixed;
-  left: 50%; }
-
+  left: 50%;
+}
+//first screen of project
 .screen {
   margin-left: 2rem;
   width: 37.5rem;
   height: 81rem;
-  border-radius: 2rem; }
-
+  @extend %lightblue-gradient;
+  @extend %blur;
+  border-radius: 2rem;
+}
+//Updates container
 .updates {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  .updates p {
+  justify-content: space-between;
+  p {
     padding-left: 2rem;
     padding-top: 2.5rem;
     width: 10.2rem;
     height: 3.2rem;
+    @extend %font-bold;
     font-size: 2.6rem;
-    line-height: 3rem; }
-  .updates .search {
+    line-height: 3rem;
+  }
+  .search {
     margin-top: 6rem;
     margin-right: 3.5rem;
     width: 1.5rem;
     height: 1.5rem;
-    z-index: 2; }
-  .updates .ellipse {
+    z-index: 2;
+  }
+  .ellipse {
     position: absolute;
     width: 3.8rem;
     height: 3.8rem;
     left: 31.3rem;
     top: 4.8rem;
-    background: #fff;
-    border-radius: 20px; }
-
+    background: $cw;
+    @extend %shadow;
+    border-radius: 20px;
+  }
+}
+//Subjects container
 .math-container {
-  position: relative; }
-
+  position: relative;
+}
 .subjects {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 40.4rem;
-  height: 18.6rem; }
-  .subjects .math {
+  height: 18.6rem;
+  //Math block
+  .math {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 6.5rem;
     height: 18.6rem;
-    background: #fff;
+    background: $cw;
     border-radius: 5rem;
-    margin-top: 1.7rem; }
-    .subjects .math .icon-bind {
+    margin-top: 1.7rem;
+    .icon-bind {
       align-self: center;
       width: 2.8rem;
       height: 2.8rem;
       left: 1.8rem;
       top: 15rem;
-      position: absolute; }
-  .subjects .avatar-first-user {
-    position: absolute; }
-  .subjects p {
+      position: absolute;
+    }
+  }
+  .avatar-first-user {
+    position: absolute;
+    @extend %dropshadow;
+  }
+  p {
     position: absolute;
     padding-left: 4rem;
     transform: rotate(-90deg);
+    @extend %font-bold;
     font-size: 1.2rem;
-    opacity: 0.4; }
-
+    opacity: 0.4;
+  }
+}
+//History block
 .history {
+
   width: 6.5rem;
   height: 18.6rem;
   left: 28.5rem;
   top: 9.68%;
-  background: #fff;
-  border-radius: 5rem; }
-  .history .icon-mic {
+  background: $cw;
+  border-radius: 5rem;
+  .icon-mic {
+
     left: 27.69%;
     right: 29.23%;
     top: 72.04%;
-    bottom: 12.9%; }
-  .history .avatar-third-user {
+    bottom: 12.9%;
+  }
+  .avatar-third-user {
+
     left: -9.46%;
     right: 23.08%;
     top: -14%;
-    bottom: 80.65%; }
-  .history p {
+    bottom: 80.65%;
+    @extend %dropshadow;
+  }
+  p {
     transform: rotate(-90deg);
     position: absolute;
     top: 3.7rem;
@@ -128,25 +182,32 @@ html {
     font-family: Gilroy;
     font-weight: bold;
     font-size: 1.2rem;
-    opacity: 0.4; }
-
+    opacity: 0.4;
+  }
+}
+//Litrature block
 .litrature {
   display: flex;
   flex-direction: column;
+
   width: 16.4rem;
   height: 16.8rem;
   left: 9.4rem;
   top: 2.8rem;
-  background: #fff;
-  border-radius: 20px; }
-  .litrature .avatar-second-user {
+  background: $cw;
+  @extend %shadow;
+  border-radius: 20px;
+  .avatar-second-user {
+
     width: 7.6rem;
     left: -0.2rem;
-    top: -3.7rem; }
-  .litrature .info {
+    top: -3.7rem;
+    @extend %dropshadow;
+  }
+  .info {
     display: flex;
-    flex-direction: row; }
-    .litrature .info .title {
+    flex-direction: row;
+    .title {
       width: 5.6rem;
       height: 3.4rem;
       left: 12.9rem;
@@ -154,11 +215,13 @@ html {
       margin-right: 1rem;
       margin-left: 2.3rem;
       margin-top: 3.4rem;
+      @extend %font-bold;
       font-weight: bold;
       font-size: 1.4rem;
       line-height: 1.6rem;
-      color: #000000; }
-    .litrature .info .button {
+      color: #000000;
+    }
+    .button {
       width: 5.1rem;
       height: 2rem;
       left: 19.5rem;
@@ -172,8 +235,10 @@ html {
       font-style: normal;
       font-weight: normal;
       font-size: 1rem;
-      line-height: 1.9rem; }
-  .litrature .time {
+      line-height: 1.9rem;
+    }
+  }
+  .time {
     font-family: Google Sans;
     font-style: normal;
     font-weight: normal;
@@ -182,14 +247,17 @@ html {
     margin-top: 1.4rem;
     margin-bottom: 1.7rem;
     text-align: center;
-    color: #74797d; }
-
+    color: #74797d;
+  }
+}
 .icons-second-user {
   display: flex;
   flex-direction: row;
-  margin-left: 1.3rem; }
-  .icons-second-user img {
-    padding-left: 1rem; }
+  margin-left: 1.3rem;
+  img {
+    padding-left: 1rem;
+  }
+}
 
 .project-management {
   display: flex;
@@ -199,8 +267,10 @@ html {
   height: 10.3rem;
   left: 2rem;
   top: 38rem;
-  background: #fff;
-  border-radius: 2rem; }
+  background: $cw;
+  @extend %shadow;
+  border-radius: 2rem;
+}
 
 .play-bg {
   position: absolute;
@@ -208,15 +278,18 @@ html {
   height: 5.8rem;
   left: 26rem;
   top: -2.7rem;
-  background: #1422f4;
-  border-radius: 1.8rem; }
+  background: $cb;
+  @extend %shadow-play;
+  border-radius: 1.8rem;
+}
 
 .playicon {
   position: absolute;
   width: 1.4rem;
   height: 1.4rem;
   left: 28.3rem;
-  top: -0.5rem; }
+  top: -0.5rem;
+}
 
 .title-project {
   display: flex;
@@ -230,72 +303,85 @@ html {
   letter-spacing: -0.02em;
   font-weight: bold;
   padding-bottom: 0;
-  color: #000000; }
+  color: #000000;
+}
 
 .bottom-project {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 2.5rem; }
+  margin-left: 2.5rem;
+}
 
 .range {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-
+  justify-content: space-between;
+}
 .range img {
   width: 3.6rem;
   height: 1.3rem;
   padding-top: 1.3rem;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+}
 
 .progress {
   font-size: 1.2rem;
+  @extend %gilroy;
   margin-right: 2rem;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .range p {
   font-size: 1.2rem;
-  font-weight: bold; }
+  @extend %gilroy;
+  font-weight: bold;
+}
 
 .subject-img {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 22rem; }
+  margin-top: 22rem;
+}
 
 .footer-first-screen {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+}
 
 .button-classes {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #1422f4;
+  background-color: $cb;
   height: 5.3rem;
   width: 11.8rem;
   border-radius: 5rem;
-  margin-top: 2.5rem; }
+  margin-top: 2.5rem;
+}
 
 .button-classes img {
   width: 1.6rem;
   height: 1.5rem;
   align-self: center;
-  padding-right: 0.8rem; }
-
+  padding-right: 0.8rem;
+}
 .button-classes p {
-  color: #fff;
+  @extend %gilroy;
+  color: $cw;
   font-size: 1.4rem;
   line-height: 1.6rem;
-  margin-top: 1.9rem; }
+  margin-top: 1.9rem;
+}
 
 .footericons {
   width: 1.9rem;
   height: 1.9rem;
   margin-top: 2rem;
-  align-self: center; }
+  align-self: center;
+}
 
 .statistic-screen {
   position: absolute;
@@ -303,8 +389,11 @@ html {
   top: 37.9rem;
   width: 37.5rem;
   height: 63.1rem;
+  @extend %lightblue-gradient;
+  @extend %blur;
   border-radius: 2rem;
-  z-index: 2; }
+  z-index: 2;
+}
 
 .header-statistic {
   display: flex;
@@ -315,37 +404,42 @@ html {
   top: 23rem;
   width: 37.5rem;
   height: 18rem;
-  background: #1422f4;
+  background: $cb;
+  @extend %blur;
   border-radius: 2rem;
-  z-index: 1; }
+  z-index: 1;
+}
 
 .title-stat {
-  margin-top: 4rem; }
-
+  margin-top: 4rem;
+}
 .AR {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 0.8rem;
   line-height: 1rem;
-  color: #fff;
+  color: $cw;
   align-self: center;
   margin: 0.3rem;
-  padding: 0.3rem; }
+  padding: 0.3rem;
+}
 
 .MBA {
   font-size: 1.8rem;
   line-height: 2.1rem;
-  color: #fff;
+  color: $cw;
   margin: 0.3rem;
-  padding: 0.3rem; }
+  padding: 0.3rem;
+}
 
 .big-circle {
   background-color: rgba(255, 255, 255, 0.158);
   border-radius: 50%;
   width: 6.3rem;
   height: 6.3rem;
-  margin-top: 3.5rem; }
+  margin-top: 3.5rem;
+}
 
 .small-circle {
   display: flex;
@@ -357,18 +451,20 @@ html {
   width: 4.1rem;
   height: 4.1rem;
   opacity: 0.3;
-  background: #fff;
+  background: $cw;
   border-radius: 1.6rem;
-  align-self: center; }
+  align-self: center;
+}
 
 .search-svg {
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
   align-self: center;
-  color: #fff;
+  color: $cw;
   left: 29.5rem;
-  top: 5.9rem; }
+  top: 5.9rem;
+}
 
 .dash {
   position: absolute;
@@ -377,55 +473,63 @@ html {
   left: 16.3rem;
   top: 1rem;
   background: #bbbbbb;
-  border-radius: 3rem; }
+  border-radius: 3rem;
+}
 
 .stat {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+}
 
 .left-stat {
   display: flex;
   flex-direction: row;
-  margin-left: 3rem; }
+  margin-left: 3rem;
+}
 
 .left-stat p {
+  @extend %font-bold;
   font-size: 2.6rem;
   line-height: 3.3rem;
-  color: #000000; }
-
+  color: #000000;
+}
 .left-stat img {
-  padding-right: 2rem; }
-
+  padding-right: 2rem;
+}
 .raiting {
   width: 4.4rem;
   height: 3rem;
+  @extend %font-bold;
   font-size: 2.4rem;
   line-height: 2.8rem;
   color: #000000;
   border-bottom: #42c9ff85 0.4rem solid;
-  margin-right: 4rem; }
+  margin-right: 4rem;
+}
 
 .result p {
   margin-left: 3.3rem;
+  @extend %gilroy;
   font-size: 1.8rem;
   line-height: 2.1rem;
   color: #000000;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .subject-progress {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 15.9rem; }
-
+  height: 15.9rem;
+}
 .subject-progress span {
   font-size: 0.8rem;
   line-height: 0.9rem;
   align-self: center;
-  padding-left: 0.058rem; }
-
+  padding-left: 0.058rem;
+}
 .progress-container-litrature,
 .progress-container-geography,
 .progress-container-history,
@@ -437,20 +541,22 @@ html {
   box-sizing: border-box;
   border-radius: 5rem;
   width: 6.8rem;
-  padding-top: 1rem; }
-
+  padding-top: 1rem;
+}
 .progress-container-geography,
 .progress-container-history {
-  background-color: #fff; }
-
+  background-color: $cw;
+}
 .progress-container-geography,
 .progress-container-history,
 .progress-container-algebra {
-  border: none; }
+  border: none;
+}
 
 .progress-container-algebra {
   background-color: blue;
-  color: #fff; }
+  color: $cw;
+}
 
 .title-litrature,
 .title-geography,
@@ -458,10 +564,12 @@ html {
 .title-algebra {
   transform: rotate(-90deg);
   align-items: center;
+  @extend %gilroy;
   font-size: 1.1rem;
   line-height: 1.3rem;
   font-weight: bold;
-  text-align: start; }
+  text-align: start;
+}
 
 .progress-litrature,
 .progress-geography,
@@ -471,9 +579,8 @@ html {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  font-weight: bold; }
-
+  font-weight: bold;
+}
 .progress-litrature {
-  color: rgba(0, 0, 0, 0.507); }
-
-/*# sourceMappingURL=style.css.map */
+  color: rgba(0, 0, 0, 0.507);
+}
