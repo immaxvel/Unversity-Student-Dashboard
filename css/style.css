@@ -515,11 +515,6 @@ html {
     .statistics .bar p {
       font-size: 20px;
       line-height: 24px; }
-    .statistics .bar .dot {
-      background-color: blakc;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem; }
     .statistics .bar .bar-block {
       width: 5.5rem;
       height: 13.7rem;
@@ -529,23 +524,28 @@ html {
       border-radius: 1rem;
       margin-bottom: 1rem;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, #ffffff 100%); }
+      .statistics .bar .bar-block .big-dot {
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+        align-self: center;
+        background-color: #ffffffc7;
+        border-radius: 50%; }
+        .statistics .bar .bar-block .big-dot .dot-bar {
+          position: absolute;
+          left: 2rem;
+          top: 2rem;
+          background-color: black;
+          border-radius: 50%;
+          width: 1rem; }
+          .statistics .bar .bar-block .big-dot .dot-bar .dot {
+            background-color: black;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem; }
     .statistics .bar .topics {
       text-align: center;
-      color: #A6AEBF;
+      color: #a6aebf;
       font-weight: 500; }
-    .statistics .bar .big-dot {
-      position: relative;
-      height: 5rem;
-      width: 5rem;
-      align-self: center;
-      background-color: #ffffffc7;
-      border-radius: 50%; }
-    .statistics .bar .dot-bar {
-      position: absolute;
-      left: 2rem;
-      top: 2rem;
-      background-color: black;
-      border-radius: 50%;
-      width: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

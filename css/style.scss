@@ -665,7 +665,7 @@ html {
       margin: 0.5rem;
     }
   }
-
+// bar with date dot and topic
   .bar {
     display: flex;
     flex-direction: column;
@@ -681,12 +681,7 @@ html {
       font-size: 20px;
       line-height: 24px;
     }
-    .dot {
-      background-color: blakc;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem;
-    }
+
     .bar-block {
       width: 5.5rem;
       height: 13.7rem;
@@ -700,27 +695,33 @@ html {
         rgba(255, 255, 255, 0.1) 0%,
         #ffffff 100%
       );
+      .big-dot {
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+        align-self: center;
+        background-color: #ffffffc7;
+        border-radius: 50%;
+        .dot-bar {
+          position: absolute;
+          left: 2rem;
+          top: 2rem;
+          background-color: black;
+          border-radius: 50%;
+          width: 1rem;
+          .dot {
+            background-color: black;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
     }
     .topics {
       text-align: center;
-      color: #A6AEBF;
+      color: #a6aebf;
       font-weight: 500;
-    }
-    .big-dot {
-      position: relative;
-      height: 5rem;
-      width: 5rem;
-      align-self: center;
-      background-color: #ffffffc7;
-      border-radius: 50%;
-    }
-    .dot-bar {
-      position: absolute;
-      left: 2rem;
-      top: 2rem;
-      background-color: black;
-      border-radius: 50%;
-      width: 1rem;
     }
   }
 }
