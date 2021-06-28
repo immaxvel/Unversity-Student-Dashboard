@@ -46,8 +46,11 @@
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
 }
 //Переменная цвета
-$cb: #1422f4;
-$cw: #fff;
+$colorblue: #1422f4;
+$colorwhite: #fff;
+$colorblack: #000000;
+$colorgrey: #b5b6b9;
+$colorlightgrey: #ffffffc7;
 //Блюр
 %blur {
   backdrop-filter: blur(22.4rem);
@@ -95,7 +98,7 @@ html {
     line-height: 3rem;
   }
   .search {
-    margin-top: 6rem;
+    margin-top: 6.2rem;
     margin-right: -24.4rem;
     width: 1.5rem;
     height: 1.5rem;
@@ -106,7 +109,7 @@ html {
     height: 3.8rem;
     margin-top: 5rem;
     margin-right: 1rem;
-    background: $cw;
+    background: $colorwhite;
     @extend %shadow;
     border-radius: 20px;
   }
@@ -121,15 +124,15 @@ html {
   margin-left: -0.5rem;
   margin-top: 1rem;
   .math-container {
-    margin-left: -2rem;
-    margin-right: -2rem;
+    margin-left: -1rem;
+    margin-right: -3rem;
     .math {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       width: 6.5rem;
       height: 18.6rem;
-      background: $cw;
+      background: $colorwhite;
       border-radius: 5rem;
       .icon-bind {
         align-self: center;
@@ -159,8 +162,9 @@ html {
     justify-content: space-around;
     width: 6.5rem;
     height: 18.6rem;
-    background: $cw;
+    background: $colorwhite;
     border-radius: 5rem;
+    margin-right: 1rem;
     .icon-mic {
       align-self: center;
       width: 2.8rem;
@@ -188,9 +192,10 @@ html {
     width: 16.4rem;
     height: 18.8rem;
     margin-left: 2rem;
-    background: $cw;
+    background: $colorwhite;
     @extend %shadow;
     border-radius: 20px;
+    margin-right: -1rem;
     .avatar-second-user {
       width: 7.6rem;
       margin-top: -2rem;
@@ -210,7 +215,7 @@ html {
         font-weight: bold;
         font-size: 1.4rem;
         line-height: 1.6rem;
-        color: #000000;
+        color: $colorblack;
       }
       .button {
         width: 5.1rem;
@@ -266,7 +271,7 @@ html {
     justify-content: space-between;
     width: 34rem;
     height: 10.3rem;
-    background: $cw;
+    background: $colorwhite;
     @extend %shadow;
     border-radius: 2rem;
   }
@@ -286,7 +291,7 @@ html {
       letter-spacing: -0.02em;
       font-weight: bold;
       padding-bottom: 0;
-      color: #000000;
+      color: $colorblack;
     }
     .range {
       display: flex;
@@ -317,7 +322,7 @@ html {
     .play-bg {
       width: 5.8rem;
       height: 5.8rem;
-      background: $cb;
+      background: $colorblue;
       @extend %shadow-play;
       border-radius: 1.8rem;
     }
@@ -356,7 +361,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: $cb;
+    background-color: $colorblue;
     height: 5.3rem;
     width: 11.8rem;
     border-radius: 5rem;
@@ -371,7 +376,7 @@ html {
   }
   .button-classes p {
     @extend %gilroy;
-    color: $cw;
+    color: $colorwhite;
     font-size: 1.4rem;
     line-height: 1.6rem;
     margin-top: 1.9rem;
@@ -399,7 +404,7 @@ html {
     justify-content: space-around;
     width: 37.5rem;
     height: 18rem;
-    background: $cb;
+    background: $colorblue;
     @extend %blur;
     border-radius: 2rem;
     z-index: 1;
@@ -414,7 +419,7 @@ html {
       font-weight: 500;
       font-size: 0.8rem;
       line-height: 1rem;
-      color: $cw;
+      color: $colorwhite;
       align-self: center;
       margin: 0.3rem;
       padding: 0.3rem;
@@ -423,7 +428,7 @@ html {
     .MBA {
       font-size: 1.8rem;
       line-height: 2.1rem;
-      color: $cw;
+      color: $colorwhite;
       margin: 0.3rem;
       padding: 0.3rem;
     }
@@ -449,7 +454,7 @@ html {
           width: 1.5rem;
           height: 1.5rem;
           align-self: center;
-          color: $cw;
+          color: $colorwhite;
         }
       }
     }
@@ -465,7 +470,7 @@ html {
       margin: 0.5rem auto;
       width: 4.9rem;
       height: 0.7rem;
-      background: #bbbbbb;
+      background: $colorgrey;
       border-radius: 3rem;
     }
 
@@ -486,7 +491,7 @@ html {
       @extend %font-bold;
       font-size: 2.6rem;
       line-height: 3.3rem;
-      color: #000000;
+      color: $colorblack;
     }
     .left-stat img {
       padding-right: 2rem;
@@ -497,7 +502,7 @@ html {
       @extend %font-bold;
       font-size: 2.4rem;
       line-height: 2.8rem;
-      color: #000000;
+      color: $colorblack;
       border-bottom: #42c9ff85 0.4rem solid;
       margin-right: 4rem;
     }
@@ -507,7 +512,7 @@ html {
       @extend %gilroy;
       font-size: 1.8rem;
       line-height: 2.1rem;
-      color: #000000;
+      color: $colorblack;
       font-weight: bold;
     }
 
@@ -530,7 +535,7 @@ html {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      border: 0.08rem dashed #607d7c;
+      border: 0.08rem dashed $colorblack;
       box-sizing: border-box;
       border-radius: 5rem;
       width: 6.8rem;
@@ -538,7 +543,7 @@ html {
     }
     .progress-container-geography,
     .progress-container-history {
-      background-color: $cw;
+      background-color: $colorwhite;
     }
     .progress-container-geography,
     .progress-container-history,
@@ -547,8 +552,8 @@ html {
     }
 
     .progress-container-algebra {
-      background-color: blue;
-      color: $cw;
+      background-color: $colorblue;
+      color: $colorwhite;
     }
 
     .title-litrature,
@@ -609,7 +614,7 @@ html {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      background-color: $cb;
+      background-color: $colorblue;
       height: 5.3rem;
       width: 11.8rem;
       border-radius: 5rem;
@@ -624,7 +629,7 @@ html {
     }
     .button-classes-second p {
       @extend %gilroy;
-      color: $cw;
+      color: $colorwhite;
       font-size: 1.4rem;
       line-height: 1.6rem;
       margin-top: 1.9rem;
@@ -700,7 +705,7 @@ html {
         height: 5rem;
         width: 5rem;
         align-self: center;
-        background-color: #ffffffc7;
+        background-color: $colorlightgrey;
         border-radius: 50%;
         .dot-bar {
           position: absolute;
@@ -720,7 +725,7 @@ html {
     }
     .topics {
       text-align: center;
-      color: #a6aebf;
+      color: $colorgrey;
       font-weight: 500;
     }
   }

@@ -61,7 +61,7 @@ html {
     font-size: 2.6rem;
     line-height: 3rem; }
   .updates .search {
-    margin-top: 6rem;
+    margin-top: 6.2rem;
     margin-right: -24.4rem;
     width: 1.5rem;
     height: 1.5rem;
@@ -83,8 +83,8 @@ html {
   margin-left: -0.5rem;
   margin-top: 1rem; }
   .subjects .math-container {
-    margin-left: -2rem;
-    margin-right: -2rem; }
+    margin-left: -1rem;
+    margin-right: -3rem; }
     .subjects .math-container .math {
       display: flex;
       flex-direction: column;
@@ -112,7 +112,8 @@ html {
   width: 6.5rem;
   height: 18.6rem;
   background: #fff;
-  border-radius: 5rem; }
+  border-radius: 5rem;
+  margin-right: 1rem; }
   .history-container .history .icon-mic {
     align-self: center;
     width: 2.8rem;
@@ -132,7 +133,8 @@ html {
   height: 18.8rem;
   margin-left: 2rem;
   background: #fff;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-right: -1rem; }
   .litrature-container .litrature .avatar-second-user {
     width: 7.6rem;
     margin-top: -2rem;
@@ -352,7 +354,7 @@ html {
       margin: 0.5rem auto;
       width: 4.9rem;
       height: 0.7rem;
-      background: #bbbbbb;
+      background: #b5b6b9;
       border-radius: 3rem; }
     .statistics .statistic-screen .stat {
       display: flex;
@@ -400,7 +402,7 @@ html {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      border: 0.08rem dashed #607d7c;
+      border: 0.08rem dashed #000000;
       box-sizing: border-box;
       border-radius: 5rem;
       width: 6.8rem;
@@ -413,7 +415,7 @@ html {
     .statistics .statistic-screen .progress-container-algebra {
       border: none; }
     .statistics .statistic-screen .progress-container-algebra {
-      background-color: blue;
+      background-color: #1422f4;
       color: #fff; }
     .statistics .statistic-screen .title-litrature,
     .statistics .statistic-screen .title-geography,
@@ -545,7 +547,7 @@ html {
             height: 1rem; }
     .statistics .bar .topics {
       text-align: center;
-      color: #a6aebf;
+      color: #b5b6b9;
       font-weight: 500; }
 
 /*# sourceMappingURL=style.css.map */
