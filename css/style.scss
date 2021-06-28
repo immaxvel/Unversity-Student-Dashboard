@@ -1,0 +1,727 @@
+//Шаблон для шрифта Gilroy Bold
+%font-bold {
+  font-family: Gilroy;
+  font-weight: bold;
+}
+//Шаблон для шрифта Gilroy
+%gilroy {
+  font-family: Gilroy;
+}
+//Градиент для экранов
+%lightblue-gradient {
+  background: linear-gradient(
+    to top right,
+    rgb(255, 255, 255),
+    rgb(206, 230, 253)
+  );
+}
+//Градиент для фона
+%bg-gradient {
+  background: linear-gradient(
+    to top right,
+    rgb(253, 230, 230),
+    rgb(210, 210, 250)
+  );
+}
+//Тени
+%shadow {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.01),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.00759259),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.00607407),
+    0px 20px 13px rgba(0, 0, 0, 0.005),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00392593),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00240741);
+}
+//Тень для кнопки плей
+%shadow-play {
+  box-shadow: 0px 42px 65px rgba(20, 34, 244, 0.14),
+    0px 27.2222px 38.0671px rgba(20, 34, 244, 0.106296),
+    0px 16.1778px 20.7037px rgba(20, 34, 244, 0.085037),
+    0px 8.4px 10.5625px rgba(20, 34, 244, 0.07),
+    0px 3.42222px 5.2963px rgba(20, 34, 244, 0.054963),
+    0px 0.777778px 2.55787px rgba(20, 34, 244, 0.0337037);
+}
+//Тень дропшедоу
+%dropshadow {
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+}
+//Переменная цвета
+$cb: #1422f4;
+$cw: #fff;
+//Блюр
+%blur {
+  backdrop-filter: blur(22.4rem);
+}
+//HTML
+html {
+  font-size: 10px;
+  height: 208rem;
+  @extend %bg-gradient;
+  @extend %gilroy;
+}
+.updates-screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+//Star at the center
+.star {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+//first screen of project
+.screen {
+  margin-left: 2rem;
+  width: 37.5rem;
+  height: 81rem;
+  @extend %lightblue-gradient;
+  @extend %blur;
+  border-radius: 2rem;
+  margin-top: 3rem;
+}
+//Updates container
+.updates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  p {
+    padding-left: 2rem;
+    padding-top: 2.5rem;
+    width: 10.2rem;
+    height: 3.2rem;
+    @extend %font-bold;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+  .search {
+    margin-top: 6rem;
+    margin-right: -24.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 2;
+  }
+  .ellipse {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    background: $cw;
+    @extend %shadow;
+    border-radius: 20px;
+  }
+}
+//Subjects container
+.subjects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40.4rem;
+  height: 18.6rem;
+  margin-left: -0.5rem;
+  margin-top: 1rem;
+  .math-container {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    .math {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 6.5rem;
+      height: 18.6rem;
+      background: $cw;
+      border-radius: 5rem;
+      .icon-bind {
+        align-self: center;
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+      .avatar-first-user {
+        margin-top: -2.5rem;
+        @extend %dropshadow;
+      }
+      .math-p {
+        padding-left: 4rem;
+        transform: rotate(-90deg);
+        @extend %font-bold;
+        font-size: 1.2rem;
+        opacity: 0.4;
+      }
+    }
+    //Math block
+  }
+}
+//History block
+.history-container {
+  .history {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 6.5rem;
+    height: 18.6rem;
+    background: $cw;
+    border-radius: 5rem;
+    .icon-mic {
+      align-self: center;
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    .avatar-third-user {
+      margin-top: -2.5rem;
+      @extend %dropshadow;
+    }
+    .history-p {
+      padding-left: 4rem;
+      transform: rotate(-90deg);
+      @extend %font-bold;
+      font-size: 1.2rem;
+      opacity: 0.4;
+    }
+  }
+}
+
+//Litrature block
+.litrature-container {
+  .litrature {
+    display: flex;
+    flex-direction: column;
+    width: 16.4rem;
+    height: 18.8rem;
+    margin-left: 2rem;
+    background: $cw;
+    @extend %shadow;
+    border-radius: 20px;
+    .avatar-second-user {
+      width: 7.6rem;
+      margin-top: -2rem;
+      margin-bottom: -3.2rem;
+      @extend %dropshadow;
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+      .english-p {
+        width: 5.6rem;
+        height: 3.4rem;
+        margin-right: 1rem;
+        margin-left: 2.3rem;
+        margin-top: 3.4rem;
+        @extend %font-bold;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #000000;
+      }
+      .button {
+        width: 5.1rem;
+        height: 2rem;
+        margin-top: 3.9rem;
+        color: #006aff;
+        background: #d5e5fb;
+        border-radius: 0.3rem;
+        text-align: center;
+        font-family: Google Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
+    }
+    .time {
+      font-family: Google Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      margin-top: 1.4rem;
+      margin-bottom: 1.7rem;
+      text-align: center;
+      color: #74797d;
+    }
+    .icons-second-user {
+      display: flex;
+      flex-direction: row;
+      margin-left: 1.3rem;
+      justify-content: start;
+      margin-left: 1.3rem;
+      img {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+//Project management container
+.project-management-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5rem;
+  height: 12rem;
+  align-items: center;
+  //Project management block with 2 blocks
+  .project-management {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 34rem;
+    height: 10.3rem;
+    background: $cw;
+    @extend %shadow;
+    border-radius: 2rem;
+  }
+  //progress bar
+  .bottom-project {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    .title-project {
+      display: flex;
+      width: 12.2rem;
+      height: 1.5rem;
+      padding-top: 1.5rem;
+      font-family: Gilroy;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      letter-spacing: -0.02em;
+      font-weight: bold;
+      padding-bottom: 0;
+      color: #000000;
+    }
+    .range {
+      display: flex;
+      flex-direction: row;
+      img {
+        width: 3.6rem;
+        height: 1.3rem;
+        padding-top: 1.3rem;
+        padding-left: 1rem;
+      }
+      p {
+        font-size: 1.2rem;
+        @extend %gilroy;
+        font-weight: bold;
+      }
+    }
+  }
+  //play button and text
+  .button-progress {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -2rem;
+    .play {
+      display: flex;
+    }
+    .play-bg {
+      width: 5.8rem;
+      height: 5.8rem;
+      background: $cb;
+      @extend %shadow-play;
+      border-radius: 1.8rem;
+    }
+
+    .playicon {
+      position: absolute;
+      left: 2.4rem;
+      top: 2.2rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      z-index: 5;
+    }
+    .progress {
+      font-size: 1.2rem;
+      @extend %gilroy;
+      margin-right: 2rem;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+//2 subjects items
+.subject-img {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+//Footer bar 1st  and 2nd  screen
+.footer-first-screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .button-classes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $cb;
+    height: 5.3rem;
+    width: 11.8rem;
+    border-radius: 5rem;
+    margin-top: 2.5rem;
+  }
+
+  .button-classes img {
+    width: 1.6rem;
+    height: 1.5rem;
+    align-self: center;
+    padding-right: 0.8rem;
+  }
+  .button-classes p {
+    @extend %gilroy;
+    color: $cw;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-top: 1.9rem;
+  }
+
+  .footericons {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-top: 2rem;
+    align-self: center;
+  }
+}
+
+//2nd screen statistics
+.statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 21rem;
+  position: relative;
+  //top bar ablosute from relative parent
+  .header-statistic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 37.5rem;
+    height: 18rem;
+    background: $cb;
+    @extend %blur;
+    border-radius: 2rem;
+    z-index: 1;
+    position: absolute;
+    top: -15rem;
+    .title-stat {
+      margin-top: 4rem;
+    }
+    .AR {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: $cw;
+      align-self: center;
+      margin: 0.3rem;
+      padding: 0.3rem;
+    }
+
+    .MBA {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      color: $cw;
+      margin: 0.3rem;
+      padding: 0.3rem;
+    }
+
+    .big-circle {
+      background-color: rgba(255, 255, 255, 0.158);
+      border-radius: 50%;
+      width: 6.3rem;
+      height: 6.3rem;
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: center;
+      .small-circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 4.1rem;
+        height: 4.1rem;
+        background: #ffffff47;
+        border-radius: 1.6rem;
+        align-self: center;
+        .search-svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          align-self: center;
+          color: $cw;
+        }
+      }
+    }
+  }
+  .statistic-screen {
+    width: 37.5rem;
+    height: 63.1rem;
+    @extend %lightblue-gradient;
+    @extend %blur;
+    border-radius: 2rem;
+    z-index: 2;
+    .dash {
+      margin: 0.5rem auto;
+      width: 4.9rem;
+      height: 0.7rem;
+      background: #bbbbbb;
+      border-radius: 3rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: -1rem;
+    }
+
+    .left-stat {
+      display: flex;
+      flex-direction: row;
+      margin-left: 3rem;
+    }
+
+    .left-stat p {
+      @extend %font-bold;
+      font-size: 2.6rem;
+      line-height: 3.3rem;
+      color: #000000;
+    }
+    .left-stat img {
+      padding-right: 2rem;
+    }
+    .raiting {
+      width: 4.4rem;
+      height: 3rem;
+      @extend %font-bold;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      color: #000000;
+      border-bottom: #42c9ff85 0.4rem solid;
+      margin-right: 4rem;
+    }
+
+    .result p {
+      margin-left: 3.3rem;
+      @extend %gilroy;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .subject-progress {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 15.9rem;
+    }
+    .subject-progress span {
+      font-size: 0.8rem;
+      line-height: 0.9rem;
+      align-self: center;
+      padding-left: 0.058rem;
+    }
+    .progress-container-litrature,
+    .progress-container-geography,
+    .progress-container-history,
+    .progress-container-algebra {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      border: 0.08rem dashed #607d7c;
+      box-sizing: border-box;
+      border-radius: 5rem;
+      width: 6.8rem;
+      padding-top: 1rem;
+    }
+    .progress-container-geography,
+    .progress-container-history {
+      background-color: $cw;
+    }
+    .progress-container-geography,
+    .progress-container-history,
+    .progress-container-algebra {
+      border: none;
+    }
+
+    .progress-container-algebra {
+      background-color: blue;
+      color: $cw;
+    }
+
+    .title-litrature,
+    .title-geography,
+    .title-history,
+    .title-algebra {
+      transform: rotate(-90deg);
+      align-items: center;
+      @extend %gilroy;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      font-weight: bold;
+      text-align: start;
+    }
+
+    .progress-litrature,
+    .progress-geography,
+    .progress-history,
+    .progress-algebra {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+    }
+    .progress-litrature {
+      color: rgba(0, 0, 0, 0.507);
+    }
+  }
+
+  //diagramm container
+  .diagramm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    position: relative;
+    .diagramm-bg {
+      background: url(../img/diagramm.png);
+      border-radius: 2rem;
+      height: 28.3rem;
+    }
+  }
+
+  //footer 2nd screen
+  .footer-second-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -9rem;
+    img:first-child {
+      width: 1.9rem;
+      height: 1.9rem;
+      margin-top: 2rem;
+      align-self: center;
+    }
+    .button-classes-second {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: $cb;
+      height: 5.3rem;
+      width: 11.8rem;
+      border-radius: 5rem;
+      margin-top: 2.5rem;
+    }
+    .button-classes-second img {
+      margin: 0;
+      width: 1.6rem;
+      height: 1.5rem;
+      align-self: center;
+      padding-right: 0.8rem;
+    }
+    .button-classes-second p {
+      @extend %gilroy;
+      color: $cw;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-top: 1.9rem;
+    }
+
+    .footericons-second {
+      width: 1.9rem;
+      height: 1.9rem;
+      margin-top: 2rem;
+      align-self: center;
+    }
+  }
+  // block of answers and percents
+  .answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+    left: 1rem;
+    .right-percent,
+    .wrong-percent {
+      @extend %font-bold;
+      font-size: 28px;
+      line-height: 33px;
+      color: black;
+      margin: 0.5rem;
+    }
+    .right,
+    .wrong {
+      margin-right: 1rem;
+    }
+    .right-title,
+    .wrong-title {
+      @extend %font-bold;
+      font-size: 18px;
+      line-height: 21px;
+      opacity: 0.4;
+      margin: 0.5rem;
+    }
+  }
+// bar with date dot and topic
+  .bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    @extend %font-bold;
+    font-size: 10px;
+    line-height: 12px;
+    left: 16rem;
+    text-align: center;
+    top: 3.6rem;
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .bar-block {
+      width: 5.5rem;
+      height: 13.7rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        #ffffff 100%
+      );
+      .big-dot {
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+        align-self: center;
+        background-color: #ffffffc7;
+        border-radius: 50%;
+        .dot-bar {
+          position: absolute;
+          left: 2rem;
+          top: 2rem;
+          background-color: black;
+          border-radius: 50%;
+          width: 1rem;
+          .dot {
+            background-color: black;
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+    .topics {
+      text-align: center;
+      color: #a6aebf;
+      font-weight: 500;
+    }
+  }
+}
