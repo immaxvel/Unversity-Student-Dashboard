@@ -14,7 +14,8 @@ html, .project-management-container .bottom-project .range p, .project-managemen
   background: linear-gradient(to top right, white, #cee6fd); }
 
 html {
-  background: linear-gradient(to top right, #fde6e6, #d2d2fa); }
+  background: linear-gradient(to top right, #fde6e6, #d2d2fa);
+  background-size: 1200rem 1200rem; }
 
 .updates .ellipse, .litrature-container .litrature, .project-management-container .project-management {
   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.01), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.00759259), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.00607407), 0px 20px 13px rgba(0, 0, 0, 0.005), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00392593), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00240741); }
@@ -30,7 +31,7 @@ html {
 
 html {
   font-size: 10px;
-  height: 208rem; }
+  height: 80rem; }
 
 .updates-screen {
   display: flex;
@@ -62,7 +63,7 @@ html {
     line-height: 3rem; }
   .updates .search {
     margin-top: 6.2rem;
-    margin-right: -24.4rem;
+    margin-right: -23.4rem;
     width: 1.5rem;
     height: 1.5rem;
     z-index: 2; }
@@ -70,7 +71,7 @@ html {
     width: 3.8rem;
     height: 3.8rem;
     margin-top: 5rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     background: #fff;
     border-radius: 20px; }
 

@@ -22,6 +22,7 @@
     rgb(253, 230, 230),
     rgb(210, 210, 250)
   );
+  background-size: 1200rem 1200rem;
 }
 //Тени
 %shadow {
@@ -58,7 +59,7 @@ $colorlightgrey: #ffffffc7;
 //HTML
 html {
   font-size: 10px;
-  height: 208rem;
+  height: 80rem;
   @extend %bg-gradient;
   @extend %gilroy;
 }
@@ -99,7 +100,7 @@ html {
   }
   .search {
     margin-top: 6.2rem;
-    margin-right: -24.4rem;
+    margin-right: -23.4rem;
     width: 1.5rem;
     height: 1.5rem;
     z-index: 2;
@@ -108,7 +109,7 @@ html {
     width: 3.8rem;
     height: 3.8rem;
     margin-top: 5rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     background: $colorwhite;
     @extend %shadow;
     border-radius: 20px;
@@ -123,6 +124,7 @@ html {
   height: 18.6rem;
   margin-left: -0.5rem;
   margin-top: 1rem;
+   //Math block
   .math-container {
     margin-left: -1rem;
     margin-right: -3rem;
@@ -151,7 +153,7 @@ html {
         opacity: 0.4;
       }
     }
-    //Math block
+   
   }
 }
 //History block
